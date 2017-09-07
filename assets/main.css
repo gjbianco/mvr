@@ -1,0 +1,4 @@
+.selectedPost {
+  border: dashed 2px black;
+  background-color: #eee;
+}
