@@ -7,9 +7,8 @@
 (function() {
   'use strict';
 
-  // TODO whitelist comments when support added
-  // whitelist only main subreddit pages (https://regex101.com/r/7Fdbzd/3)
-  if(!document.URL.match(/^.*reddit\.com\/?(?:r\/\w*\/?(\?.*)?)?$/)) {
+  // whitelist only main subreddit pages (https://regex101.com/r/7Fdbzd/5)
+  if(!document.URL.match(/^(?:https?:\/\/)?(?:www\.)?reddit\.com(?:\/(?!(?:message|comments|user)\/).*)?$/)) {
     return;
   }
 
