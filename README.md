@@ -16,10 +16,20 @@ Currently, there is only a build for Safari, but Chrome and Firefox should be co
 ## Controls
 
 j - select next post
+
 k - select previous post
+
 h - toggle in-line viewing ("expando")
+
 l - open post in a new tab
 
 m - open comments in a new tab
+
 . - go to next page
+
 , - go to previous page
+
+## Planned Features
+
+ - Upvoting and downvoting
+ - Comment navigation

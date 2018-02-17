@@ -1,0 +1,21 @@
+{
+  "name": "mvr",
+  "version": "1.1.0",
+  "description": "minimum viable reddit",
+  "main": "package.json",
+  "scripts": {
+    "build": "npm run build-safari && npm run build-chrome",
+    "build-safari": "",
+    "build-chrome": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gjbianco/mvr.git"
+  },
+  "author": "Guy Bianco IV <gjbiancoiv@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gjbianco/mvr/issues"
+  },
+  "homepage": "https://github.com/gjbianco/mvr#readme"
+}
