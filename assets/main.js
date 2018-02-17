@@ -7,6 +7,12 @@
 (function() {
   'use strict';
 
+  // TODO whitelist comments when support added
+  // whitelist only main subreddit pages (https://regex101.com/r/7Fdbzd/3)
+  if(!document.URL.match(/^.*reddit\.com\/?(?:r\/\w*\/?(\?.*)?)?$/)) {
+    return;
+  }
+
   // constants
   var SELECTED_CLASS = 'selectedPost';
   var SCROLL_OFFSET = -5; // pixels
@@ -25,8 +31,7 @@
     // select default intial post
     posts[currentPost].classList.add(SELECTED_CLASS);
 
-    // TODO
-    // select post when clicked
+    // TODO select post when clicked
     // for(var pi in posts) {
     //   var p = posts[pi];
     //   p.addEventListener('click', function() {
@@ -35,6 +40,15 @@
     // }
 
     document.addEventListener('keydown', function(key) {
+      // avoid triggering while typing in text boxes
+      var aeType = document.activeElement.type;
+      if(aeType === 'textarea' || aeType === 'input') {
+        return;
+      }
+      // also avoid triggering if any modifiers are pressed
+      if(key.ctrlKey || key.shiftKey || key.altKey || key.metaKey) {
+        return;
+      }
       switch(key.code) {
         case 'KeyJ':
           // select next post
@@ -64,7 +78,7 @@
         case 'Comma':
           // go to prev page
           window.location = document.querySelector('.prev-button > a').href;
-          break
+          break;
       }
     });
   }
