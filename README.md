@@ -33,3 +33,4 @@ m - open comments in a new tab
 
  - Upvoting and downvoting
  - Comment navigation
+ - Image album controls
